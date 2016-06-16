@@ -1,0 +1,57 @@
+<nav class="bgr h40 bb20">
+  <a href="/bands" class="bg20 h40"><i class="material-icons">keyboard_arrow_left</i></a>
+  <a href="/bands/{{band.band_id}}" class="link bg20">{{band.band_name}}</a>
+</nav>
+
+<div id="gradient">
+  <div class="content">
+    <div class="band-name">{{band.band_name}}</div>
+
+    <div class="box gigs">
+      {{#band.gigs}}
+        <div class="gig">
+          <div class="gig-name">{{gig_name}}</div>
+          <div class="gig-venue">{{gig_venue}}</div>
+          <div class="gig-date">{{gig_date}}</div>
+          <div class="gig-load">{{gig_load}}</div>
+          <div class="gig-start">{{gig_start}}</div>
+          <div class="gig-end">{{gig_end}}</div>
+          <div class="gig-setlist" data-id="setlist-{{setlist}}"></div>
+        </div>
+      {{/band.gigs}}
+    </div>
+
+    <div class="box sets">
+      {{#band.setlists}}
+        <div class="set">
+          <div class="set-name">{{set_name}}</div>
+          <div class="set-description">{{set_description}}</div>
+          <div class="set-songs">
+            {{#songs}}
+              <div class="set-song" data-id="song-{{this}}"></div>
+            {{/songs}}
+          </div>
+        </div>
+      {{/band.setlists}}
+    </div>
+
+    "set_id": 0,
+    "set_name": "Pls dont fk up",
+    "set-description": "Time is running out xd",
+    "songs": [0]
+
+    <div class="box songs">
+
+    </div>
+
+  </div>
+  <aside class="art members">
+    <div class="members-header">Current Members</div>
+    {{#band.band_members}}
+      <div class="member">{{display_name}}</div>
+      {{#if @root.isAdmin}}
+        <div class="member-action"></div>
+      {{/if}}
+    {{/band.band_members}}
+  </aside>
+</div>

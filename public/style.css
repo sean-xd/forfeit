@@ -1,0 +1,184 @@
+.band-link {min-width: 100px; max-width: auto;}
+
+.content {
+  transition: .2s all;
+  width: 100%;
+  background: rgba(240,240,240,.8);
+  margin: 0px auto 0px auto;
+  height: 100%;
+  overflow-y: scroll;
+  max-width: calc(100% - 500px) !important;
+}
+
+aside {
+  width: 250px;
+  height: 100%;
+  background: rgb(20,20,20);
+  color: white;
+}
+
+.members-header {font: 16px "Droid Sans"; padding: 10px; text-align: center;}
+.member, .member-action {display: inline-block; padding: 10px 5px;}
+.member {width: 210px; font: 16px "Droid Sans";}
+.member-action {width: 40px; height: 40px; background: rgb(220,220,220);}
+
+.band-name {
+  font: 40px "Droid Sans";
+  text-align: center;
+  padding: 10px;
+}
+
+.box {
+  background: white;
+  color: black;
+  font: 16px "Droid Sans";
+  padding: 10px;
+  margin: 10px 0px;
+}
+
+.bands-content {overflow-y: scroll; padding: 40px 0px;}
+.bands-name {
+  background: rgb(220,220,220);
+  color: black;
+  display: block;
+  font: 20px "Droid Sans";
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 10px;
+  width: 100%;
+}
+.bands-name.bg20 {color: white; margin-top: 20px; cursor: default;}
+
+@media (max-width: 800px) {
+  .bands-content {padding: 0px;}
+  .bands-name.bg20 {margin-top: 0px;}
+  .bands-name {font-size: 16px;}
+}
+
+.h40 {height: 40px;}
+
+.w160 {width: 160px !important;}
+.w200 {width: 200px !important;}
+.wauto {width: auto !important;}
+
+.f13 {font-size: 13px !important; padding: 12px 10px !important;}
+.f16 {font: 16px "Droid Sans";}
+
+.bg20 {background: rgb(20,20,20) !important;}
+.bgr {background: rgb(100,10,10);}
+
+.art {position: absolute; right: 0; top: 0;}
+.alt {position: absolute; left: 0; top: 0;}
+
+.bb20 {border-bottom: 1px solid rgb(20,20,20);}
+
+.mw800 {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Sans'),
+       local('DroidSans'),
+       url(https://fonts.gstatic.com/s/droidsans/v6/s-BiyweUPV0v-yRb-cjciPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v17/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+  padding: 10px;
+  vertical-align: bottom;
+  transition: .2s all;
+  cursor: pointer;
+  color: white;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {margin-top: 200px;}
+h1, h2, h3 {text-shadow: 1px 1px black, 1px -1px black, -1px 1px black, -1px -1px black; text-align: center; color: white;}
+
+@media (max-width: 600px) {.home-content {font: 14px "Droid Sans";}}
+@media (max-width: 475px) {.home-content {font: 12px "Droid Sans";}}
+@media (max-width: 420px) {.home-content {font: 10px "Droid Sans";}}
+
+/* Reset & Body */
+html, body {border: 0; height: 100%; margin: 0; padding: 0; width: 100%; font-size: 0;}
+a {text-decoration: none; display: inline-block;}
+input, button {border: none;}
+::-webkit-scrollbar {display: none;}
+* {box-sizing: border-box; overflow: hidden;}
+
+body {
+  background-image: url("http://arounddeglobe.com/wp-content/uploads/2016/04/Kiyomizu-dera.jpg");
+  background-size: cover;
+}
+
+#gradient {
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(to right, rgba(40,10,10,.5), rgba(30,10,30,.5));
+  height: calc(100% - 40px);
+  overflow-y: scroll;
+}
+
+.page {
+  transition: .2s all;
+  height: 0;
+  top: 20%;
+  left: 10%;
+  position: absolute;
+  width: 80%;
+  background: white;
+}
+.page.show {height: 80%; border-top: 1px solid rgb(20,20,20); }
+
+@media (max-width: 1000px) {.page {width: 80%; left: 10%;}}
+@media (max-width: 650px) {.page {width: 100%; left: 0;}}
+
+.link {
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font: 16px "Droid Sans";
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  transition: .2s all;
+  width: 100px;
+}
+
+.auth {transition: .2s all; z-index: 1;}
+.auth.expand {height: 200px;}
+
+.close {right: -40px;}
+.close.show {transform: translate3d(-40px, 0, 0);}
+.signup.hide, .signin.hide {opacity: 0; padding: 0px; width: 0px;}
+.signup.w200, .signin.w200 {cursor: default;}
+
+.name {color: black !important; background: rgb(220,220,220) !important;}
+
+.auth input {padding: 10px;}
+.facebook {background: rgb(50, 86, 210);}
+.google {background: white; color: black;}

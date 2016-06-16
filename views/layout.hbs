@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kyoto.fm - Keep your shit together</title>
+    <link rel='stylesheet' href='/style.css'>
+    <script type="text/javascript" src="/client.js" defer></script>
+  </head>
+  <body>
+
+    <script>
+      window.fbAsyncInit = () => FB.init({appId: '1733575366928508', xfbml: true, version: 'v2.6'});
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <form method="post" class="auth art bg20 w200 h40">
+      {{#if user}}
+        {{#if isAdmin}}
+          <div class="link f13 bg20 name">{{user.display_name}}</div>
+        {{else}}
+          <div class="link f13 bg20">{{user.display_name}}</div>
+        {{/if}}
+        <a href="./index.html" class="link bgr bb20 h40">Sign Out</a>
+      {{else}}
+        <div class="link signup" onclick="openAuth('signup')">Sign Up</div>
+        <div class="link signin" onclick="openAuth('signin')">Sign In</div>
+        <i class="material-icons art close" onclick="closeAuth()">close</i>
+        <input type="text" name="username" placeholder="Enter Username" class="f16 w200" required>
+        <input type="password" name="password" placeholder="Enter Password" class="f16 w200" required>
+        <a href="/auth/facebook/callback" class="link facebook">Facebook</a>
+        <div class="link google">Google</div>
+        <button type="submit" class="link bg20 w200">Submit</button>
+      {{/if}}
+    </form>
+
+    {{{body}}}
+
+  </body>
+</html>

@@ -1,0 +1,18 @@
+.bands-content {overflow-y: scroll; padding: 40px 0px;}
+.bands-name {
+  background: rgb(220,220,220);
+  color: black;
+  display: block;
+  font: 20px "Droid Sans";
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 10px;
+  width: 100%;
+}
+.bands-name.bg20 {color: white; margin-top: 20px; cursor: default;}
+
+@media (max-width: 800px) {
+  .bands-content {padding: 0px;}
+  .bands-name.bg20 {margin-top: 0px;}
+  .bands-name {font-size: 16px;}
+}

@@ -1,0 +1,33 @@
+/* Reset & Body */
+html, body {border: 0; height: 100%; margin: 0; padding: 0; width: 100%; font-size: 0;}
+a {text-decoration: none; display: inline-block;}
+input, button {border: none;}
+::-webkit-scrollbar {display: none;}
+* {box-sizing: border-box; overflow: hidden;}
+
+body {
+  background-image: url("http://arounddeglobe.com/wp-content/uploads/2016/04/Kiyomizu-dera.jpg");
+  background-size: cover;
+}
+
+#gradient {
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(to right, rgba(40,10,10,.5), rgba(30,10,30,.5));
+  height: calc(100% - 40px);
+  overflow-y: scroll;
+}
+
+.page {
+  transition: .2s all;
+  height: 0;
+  top: 20%;
+  left: 10%;
+  position: absolute;
+  width: 80%;
+  background: white;
+}
+.page.show {height: 80%; border-top: 1px solid rgb(20,20,20); }
+
+@media (max-width: 1000px) {.page {width: 80%; left: 10%;}}
+@media (max-width: 650px) {.page {width: 100%; left: 0;}}

@@ -1,0 +1,25 @@
+.link {
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font: 16px "Droid Sans";
+  height: 40px;
+  padding: 10px;
+  text-align: center;
+  transition: .2s all;
+  width: 100px;
+}
+
+.auth {transition: .2s all; z-index: 1;}
+.auth.expand {height: 200px;}
+
+.close {right: -40px;}
+.close.show {transform: translate3d(-40px, 0, 0);}
+.signup.hide, .signin.hide {opacity: 0; padding: 0px; width: 0px;}
+.signup.w200, .signin.w200 {cursor: default;}
+
+.name {color: black !important; background: rgb(220,220,220) !important;}
+
+.auth input {padding: 10px;}
+.facebook {background: rgb(50, 86, 210);}
+.google {background: white; color: black;}

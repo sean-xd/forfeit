@@ -1,0 +1,22 @@
+.h40 {height: 40px;}
+
+.w160 {width: 160px !important;}
+.w200 {width: 200px !important;}
+.wauto {width: auto !important;}
+
+.f13 {font-size: 13px !important; padding: 12px 10px !important;}
+.f16 {font: 16px "Droid Sans";}
+
+.bg20 {background: rgb(20,20,20) !important;}
+.bgr {background: rgb(100,10,10);}
+
+.art {position: absolute; right: 0; top: 0;}
+.alt {position: absolute; left: 0; top: 0;}
+
+.bb20 {border-bottom: 1px solid rgb(20,20,20);}
+
+.mw800 {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+}

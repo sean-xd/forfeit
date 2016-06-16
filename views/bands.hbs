@@ -1,0 +1,15 @@
+<nav class="bgr h40 bb20">
+  <a href="/" class="bg20 h40"><i class="material-icons">keyboard_arrow_left</i></a>
+  <a href="/bands" class="link bg20">Bands</a>
+</nav>
+
+<div id="gradient" class="bands-content">
+  <div class="bands-name bg20">Your Bands</div>
+  {{#user.bands}}
+    <a class="bands-name" href="/bands/{{band_id}}">{{band_name}}</a>
+  {{/user.bands}}
+  <div class="bands-name bg20">Public Bands</div>
+  {{#bands}}
+    <a class="bands-name" href="/bands/{{band_id}}">{{band_name}}</a>
+  {{/bands}}
+</div>
